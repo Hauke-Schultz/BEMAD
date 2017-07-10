@@ -1,0 +1,60 @@
+
+@mixin ellipsis($max-width: 280px) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: $max-width;
+}
+
+.a-button {
+  outline: none;
+  min-height: $button-default-height;
+  text-align: center;
+  min-width: $button-default-min-width;
+  max-width: $button-default-max-width;
+  background-color: $button-default-background-color;
+  border: 2px solid $button-default-color;
+  color: $button-default-text-color;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: $button-default-height;
+  padding: 0 $padding-small;
+  position: relative;
+  overflow: hidden;
+  @include ellipsis();
+  span {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: $button-default-height;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  &:hover {
+    transition: all 0.25s ease;
+    color: $button-default-hover-text-color;
+    background-color: $button-default-hover-background-color;
+    span {
+      color: $button-default-hover-text-color;
+    }
+  }
+  &--disabled, &[disabled] {
+    cursor: not-allowed;
+    color: $color-white;
+    background-color: $color-grey;
+    border-color: $color-grey;
+    opacity: 0.8;
+    &:hover {
+      color: $color-white;
+      background: $color-grey;
+      border-color: $color-grey;
+    }
+  }
+}

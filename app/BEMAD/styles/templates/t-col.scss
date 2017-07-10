@@ -1,0 +1,44 @@
+
+@include make-col('mobile-portrait');
+
+@media (min-width: $screen-mobile-landscape) {
+  @include make-col('mobile-landscape');
+}
+
+@media (min-width: $screen-tablet-portrait) {
+  @include make-col('tablet-portrait');
+}
+
+@media (min-width: $screen-tablet-landscape) {
+  @include make-col('tablet-landscape');
+}
+
+@media (min-width: $screen-desktop) {
+  @include make-col('desktop');
+}
+
+@media (min-width: $screen-desktop-xl) {
+  @include make-col('desktop-xl');
+}
+
+.t-col {
+  display: inline-block;
+  &--min-height {
+    min-height: $grid-gutter-min-height;
+  }
+  &--min-width {
+    min-width: $grid-gutter-min-height;
+  }
+  &--padding {
+    padding: $grid-gutter-width;
+  }
+  &--full {
+    width: 100%;
+  }
+  &--half {
+    width: 50%;
+  }
+  &--clear {
+    clear: both;
+  }
+}

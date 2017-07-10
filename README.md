@@ -1,2 +1,2 @@
-# BEMAD
-BEM AtomicDesign Starter Kit
+# BEM-AD-React
+BEM AtomicDesign React

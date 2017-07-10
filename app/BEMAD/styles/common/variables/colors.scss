@@ -1,0 +1,26 @@
+//-- colors:start --//
+
+$color-red: rgba(224, 64, 64, 1);
+$color-cyan: rgba(96, 255, 255, 1);
+$color-magenta: rgba(224, 96, 224, 1);
+$color-green: rgba(64, 224, 64, 1);
+$color-blue: rgba(64, 64, 224, 1);
+$color-yellow: rgba(255, 255, 64, 1);
+$color-orange: rgba(224, 160, 64, 1);
+$color-brown: rgba(156, 116, 72, 1);
+$color-pink: rgba(255, 160, 160, 1);
+$color-light-green: rgba(160, 255, 160, 1);
+$color-light-blue: rgba(160, 160, 255, 1);
+
+$color-success: $color-green;
+$color-warning: rgba(235, 203, 28, 1) !default; // #EBCB1C
+$color-error: rgba(208, 2, 27, 1) !default; // #D0021B
+$color-info: $color-cyan;
+$color-white: #ffffff !default;
+$color-lighter-grey: rgba(237, 238, 234, 1) !default; // #EEDEEEA
+$color-light-grey: rgba(203, 197, 195, 1) !default; // #CBC5C3
+$color-grey: rgba(126, 117, 113, 1) !default; // #7E7571
+$color-dark-grey: rgba(35, 31, 32, 1) !default; // #231F20
+$color-black: #000000 !default;
+
+//-- colors:end --//

@@ -1,0 +1,89 @@
+.a-input {
+  outline: none;
+  z-index: 1;
+  position: relative;
+  background: none;
+  width: 100%;
+  height: $form-input-height;
+  border: 0;
+  @include text($font-size-text, $font-line-height);
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-normal;
+  color: $form-input-color-default;
+
+  &::placeholder {
+    @include text($font-size-text, $font-line-height);
+    font-weight: $font-weight-normal;
+    color: $form-input-color-default;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    background-color: transparent !important;
+    background-image: none;
+    color: inherit;
+    -webkit-text-fill-color: inherit;
+    -webkit-box-shadow: none;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  &--filled,
+  &:focus {
+    ~ .a-label {
+      color: $form-input-color-focus;
+      transform: $form-input-transform;
+    }
+    ~ .a-label__bar {
+      background: $form-input-color-focus;
+      &:before,
+      &:after {
+        background: $form-input-color-focus;
+        width: 50%;
+      }
+    }
+    ~ .a-svg {
+      color: $form-input-color-focus;
+    }
+    ~ .a-label--text {
+      color: $form-input-color-focus;
+      transform: $form-input-text-transform;
+    }
+  }
+
+  //&:not(:focus):valid,
+  &--valid {
+    ~ label {
+      color: $form-input-color-success;
+      transform: $form-input-transform;
+    }
+    &:before,
+    &:after {
+      background: $form-input-color-success;
+      width: 50%;
+    }
+  }
+
+  //&:not(:focus):invalid,
+  &--invalid {
+    ~ label {
+      color: $form-input-color-error;
+      transform: $form-input-transform;
+    }
+    &:before,
+    &:after {
+      background: $form-input-color-error;
+      width: 50%;
+    }
+  }
+
+  &--text {
+    padding: 0 30px 0 20px;
+    background: $color-white;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+
+}

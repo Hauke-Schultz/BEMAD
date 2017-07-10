@@ -1,0 +1,51 @@
+{
+  "extends": "google",
+  "rules": {
+    "indent": ["error", 4],
+    "react/jsx-indent": [2, 4],
+    "react/jsx-indent-props": [2, 4],
+    "no-undef": 1,                      // http://eslint.org/docs/rules/no-undef.html
+    "comma-dangle": [2, "never"],       // http://eslint.org/docs/rules/comma-dangle.html
+    "guard-for-in": 0,                  // http://eslint.org/docs/rules/guard-for-in.html
+    "func-names": 0,                    // http://eslint.org/docs/rules/func-names.html
+    "space-before-function-paren": 0,
+    "prefer-rest-params": 0,            // needed until node supports rest args
+    "consistent-return": 0,
+    "import/no-unresolved": [2, { "commonjs": true }],
+    "no-underscore-dangle": ["error", { "allowAfterThis": true }],
+    "no-param-reassign": ["error", { "props": false }],
+    "react/forbid-prop-types": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "max-len": [2, 120, 4,
+      {
+        "ignoreStrings": true,
+        "ignoreComments": true,
+        "ignoreUrls": true,
+        "ignoreTemplateLiterals": true
+      }
+    ]
+  },
+  "globals": {
+    "it": true,
+    "expect": true,
+    "describe": true,
+    "sinon": true,
+    "beforeEach": true,
+    "google": true,
+    "jquery": true,
+    "$": true,
+    "Payone": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "env": {
+    "browser": true
+  }
+}

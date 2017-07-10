@@ -1,0 +1,18 @@
+.o-noscript {
+  position: absolute;
+  z-index: 5;
+  width: auto;
+  height: auto;
+  top: 118px;
+  left: 0;
+  right: 0;
+  background: rgba($color-error, 0.7) !important;
+  .o-lightbox {
+    width: 100%;
+    max-height: $grid-content-max-width;
+    padding: 30px;
+    h3, p {
+      color: $color-white;
+    }
+  }
+}

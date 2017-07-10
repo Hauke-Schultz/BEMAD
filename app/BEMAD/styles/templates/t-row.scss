@@ -1,0 +1,67 @@
+.t-row {
+  display: block;
+  @include row;
+  &--centered {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+    > .t-col {
+      display: inline-block;
+      float: none;
+      /* inline-block space fix */
+      margin-right: -5px;
+    }
+  }
+  &--gutter {
+    margin: $grid-row-gutter-mobile;
+    @media (min-width: $screen-desktop) {
+      margin: $grid-row-gutter-desktop;
+    }
+    > .t-col {
+      padding: $grid-gutter-width-mobile;
+      @media (min-width: $screen-desktop) {
+        padding: $grid-gutter-width-desktop;
+      }
+    }
+  }
+  &--gutter-big {
+    margin: $grid-row-gutter-mobile;
+    > .t-col {
+      padding: $grid-gutter-width-mobile;
+    }
+    @media (min-width: $screen-desktop) {
+      margin: $grid-row-gutter-desktop-big;
+      > .t-col {
+        padding: $grid-gutter-width-desktop-big;
+      }
+    }
+  }
+  &--margin-outer {
+    padding: $grid-gutter-margin-outer;
+  }
+  &--margin-outer-top {
+    padding-top: $grid-gutter-width;
+  }
+  &--margin-outer-bottom {
+    padding-bottom: $grid-gutter-width;
+  }
+  &--margin-outer-big {
+    padding: $grid-gutter-margin-outer;
+    @media (min-width: $screen-desktop) {
+      padding: $grid-gutter-margin-outer-big;
+    }
+  }
+  &--margin-outer-big-top {
+    padding-top: $grid-gutter-width;
+    @media (min-width: $screen-desktop) {
+      padding-top: $grid-gutter-width-big;
+    }
+  }
+  &--margin-outer-big-bottom {
+    padding-bottom: $grid-gutter-width;
+    @media (min-width: $screen-desktop) {
+      padding-bottom: $grid-gutter-width-big;
+    }
+  }
+}

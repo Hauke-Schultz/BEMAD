@@ -1,0 +1,45 @@
+.a-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $color-blue;
+  line-height: $form-input-height;
+  transition: $form-label-transition;
+  z-index: 1;
+  font-size: 14px;
+
+  &__bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: $form-input-color-default;
+    width: 100%;
+    height: $form-label-bar-height;
+    z-index: 1;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      background: $form-input-color-default;
+      width: 0;
+      height: $form-label-bar-height-focus;
+      transition: $form-label-transition;
+    }
+
+    &:before {
+      left: 50%;
+    }
+
+    &:after {
+      right: 50%;
+    }
+  }
+
+  &--text {
+    padding: 0 30px 0 20px;
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+}

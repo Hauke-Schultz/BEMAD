@@ -1,0 +1,50 @@
+.t-background {
+  &--black {
+    background-color: $color-black !important;
+  }
+  &--white {
+    background-color: $color-white !important;
+  }
+  &--grey {
+    background-color: $color-grey !important;
+  }
+  &--dark-grey {
+    background-color: $color-dark-grey !important;
+  }
+  &--lighter-grey {
+    background-color: $color-lighter-grey !important;
+  }
+  &--light-grey {
+    background-color: $color-light-grey !important;
+  }
+  &--error {
+    background-color: $color-error !important;
+  }
+  &--success {
+    background-color: $color-success !important;
+  }
+  &--warning {
+    background-color: $color-warning !important;
+  }
+  &--info {
+    background-color: $color-info !important;
+  }
+  &--red {
+    background-color: $color-red !important;
+  }
+  &--green {
+    background-color: $color-green !important;
+  }
+  &--blue {
+    background-color: $color-blue !important;
+  }
+  &--yellow {
+    background-color: $color-yellow !important;
+  }
+  &--cyan {
+    background-color: $color-cyan !important;
+  }
+  &--orange {
+    background-color: $color-orange !important;
+  }
+}

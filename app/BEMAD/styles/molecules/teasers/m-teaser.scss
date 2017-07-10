@@ -1,0 +1,23 @@
+@mixin teaser() {
+  display: inline-block;
+  position: relative;
+}
+
+@mixin teaser__content() {
+  padding: $padding-small;
+  @media (min-width: $screen-desktop) {
+    padding: $padding-medium;
+  }
+}
+
+@mixin teaser__button() {
+  margin: 20px auto 0;
+  max-width: 100%;
+}
+
+.m-teaser {
+  @include teaser();
+  &__content {
+    @include teaser__content();
+  }
+}

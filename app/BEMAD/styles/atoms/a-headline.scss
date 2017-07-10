@@ -1,0 +1,26 @@
+@mixin headline($sizeType, $color: $font-default-color) {
+  line-height: $font-line-height;
+  font-weight: $font-weight-normal;
+  color: $color;
+  @if $sizeType == 'h1' {
+    font-size: 40px;
+  } @else if $sizeType == 'h2' {
+    font-size: 24px;
+  } @else if $sizeType == 'h3' {
+    font-size: 18px;
+  } @else {
+    font-size: 16px;
+  }
+}
+
+.a-headline {
+  &--h1 {
+    @include headline('h1');
+  }
+  &--h2 {
+    @include headline('h2');
+  }
+  &--h3 {
+    @include headline('h3');
+  }
+}

@@ -1,0 +1,18 @@
+.t-container {
+  &--max-width {
+    @media (min-width: $screen-desktop) {
+      max-width: $grid-content-max-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &--absolute {
+    position: absolute;
+  }
+  &--overflow-visible {
+    overflow: visible;
+  }
+  &--no-padding {
+    padding: 0;
+  }
+}

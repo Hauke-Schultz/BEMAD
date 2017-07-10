@@ -1,0 +1,9 @@
+.p-shop {
+  width: 100%;
+  margin: auto;
+  max-width: $grid-page-max-width;
+  background-color: $color-white;
+  &--fluid {
+    max-width: none;
+  }
+}

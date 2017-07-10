@@ -1,0 +1,31 @@
+@mixin aspect($percent) {
+  position: relative;
+  width: 100%;
+  &::before {
+    content: "";
+    display: block;
+    padding-top: $percent;
+  }
+  > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.t-aspect {
+  &--ratio-1to1 {
+   @include aspect(100%);
+  }
+  &--ratio-1to2 {
+    @include aspect(200%);
+  }
+  &--ratio-4to3 {
+    @include aspect(75%);
+  }
+  &--ratio-16to9 {
+    @include aspect(56.25%);
+  }
+}

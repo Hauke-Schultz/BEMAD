@@ -1,0 +1,30 @@
+.m-text-teaser {
+  @include teaser();
+  @include aspect(100%);
+  max-width: $teaser-mobile-max-width;
+  border: 2px solid $color-black;
+  @media (min-width: $screen-tablet-portrait) {
+    max-width: none;
+  }
+  &__content {
+    @include teaser__content();
+    display: flex;
+    align-items: center;
+  }
+  &__inner {
+    width: 100%;
+  }
+  &__headline {
+    @include headline('h2');
+    color: $color-black;
+  }
+  &__text {
+    @include text($font-size-text);
+    color: $color-black;
+  }
+  &__button {
+    @include teaser__button();
+    @include ellipsis(260px);
+  }
+}
+

@@ -1,0 +1,28 @@
+@mixin text($size: $font-size-text, $lineHeight: $font-line-height) {
+  font-size: $size;
+  line-height: $lineHeight;
+}
+
+.a-text {
+  @include text($font-size-text, $font-line-height);
+  font-weight: $font-weight-normal;
+  color: $font-default-color;
+  &--white {
+    color: $color-white;
+  }
+  &--black {
+    color: $color-black;
+  }
+  &--light {
+    font-weight: $font-weight-light;
+  }
+  &--bold {
+    font-weight: $font-weight-bold;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--justify {
+    text-align: justify;
+  }
+}
